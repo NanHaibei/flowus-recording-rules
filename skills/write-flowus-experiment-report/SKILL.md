@@ -1,6 +1,6 @@
 ---
 name: write-flowus-experiment-report
-description: Update a user-specified FlowUs experiment report from the report's user-filled start time, experiment reason, experiment content, records, descriptions, and data. Use when asked to briefly complete or revise the experiment content and conclusion, insert uploaded result images or generated charts, create native FlowUs tables or formulas, append a native completion time, or record a user-provided next-step plan without touching any other report.
+description: Update a user-specified FlowUs experiment report from the report's user-filled start time, experiment reason, experiment content, records, descriptions, and data. Use when asked to briefly complete or revise the experiment content and conclusion, insert uploaded result images or generated charts, create native FlowUs tables or formulas, append a native completion time, mark the target report title as completed, or record a user-provided next-step plan without touching any other report.
 ---
 
 # Write FlowUs Experiment Report
@@ -81,6 +81,17 @@ description: Update a user-specified FlowUs experiment report from the report's 
 4. 不要把完成时间作为普通文字、Markdown 或代码文本追加。
 5. 日期接口不可用或更新失败时，明确说明报告尚未完整完成，不要用文本时间替代。
 
+## 标记报告已完成
+
+正文、媒体、表格、公式和完成时间全部写入并回读成功后：
+
+1. 只读取并修改同一目标报告的标题。
+2. 将标题中的状态词“未完成”替换为“已完成”，保留标题的其他文字、顺序和格式不变。
+3. 不要修改正文或其他报告中出现的“未完成”，也不要批量修改标题。
+4. 目标标题不包含“未完成”时，不要猜测其他状态词或自行重命名；明确报告标题状态未更新。
+5. 任何必需内容或完成时间尚未成功写入时，不得把标题改为“已完成”。
+6. 修改后回读目标页面，确认页面 ID 未变且标题仅发生预期的状态词替换。
+
 ## 处理下一步计划
 
 - 用户已经提供下一步计划时，只做必要的简洁改写并写入目标报告的“下一步计划”位置，不要扩展新的任务。
@@ -100,6 +111,7 @@ description: Update a user-specified FlowUs experiment report from the report's 
 - 表格使用 FlowUs 原生表格功能
 - 公式使用 FlowUs 原生公式接口，不存在可见的 LaTeX 源码
 - 完成时间已通过 FlowUs【日期】功能添加在开始时间之后
+- 目标报告标题中的“未完成”已替换为“已完成”，标题其余部分未改变
 - 下一步计划只包含用户提供的内容；未提供时已提醒用户
 
 向用户返回目标报告链接或页面 ID、完成的修改摘要，以及任何未完成项。
