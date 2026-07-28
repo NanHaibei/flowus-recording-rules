@@ -1,0 +1,4 @@
+interface:
+  display_name: "FlowUs 实验报告编写"
+  short_description: "依据用户实验材料简要完善指定的 FlowUs 实验报告"
+  default_prompt: "使用 $write-flowus-experiment-report 完善我指定的 FlowUs 实验报告。"
