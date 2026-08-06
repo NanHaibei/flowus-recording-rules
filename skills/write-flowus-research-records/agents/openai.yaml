@@ -1,0 +1,4 @@
+interface:
+  display_name: "FlowUs 科研记录"
+  short_description: "统一整理 FlowUs 论文阅读笔记与实验结果报告"
+  default_prompt: "使用 $write-flowus-research-records 将论文或实验材料整理到 FlowUs。"

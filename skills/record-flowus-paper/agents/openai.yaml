@@ -1,4 +1,0 @@
-interface:
-  display_name: "FlowUs 论文记录"
-  short_description: "将论文录入 FlowUs，并生成可核查、易理解的结构化学习笔记"
-  default_prompt: "使用 $record-flowus-paper 将这篇论文录入 FlowUs，并生成结构化学习笔记。"
