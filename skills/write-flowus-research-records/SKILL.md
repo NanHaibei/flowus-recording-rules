@@ -1,6 +1,6 @@
 ---
 name: write-flowus-research-records
-description: "Create or update evidence-backed, style-matched FlowUs research records for two workflows: academic paper-reading notes and experiment reports. Use when asked to add, import, classify, enrich, or verify a paper in a FlowUs paper database; or when asked to complete or revise a uniquely identified FlowUs experiment report from user-provided settings, records, metrics, images, tables, formulas, conclusions, completion time, or next-step plans. Read recent user-authored notes to match their writing style and mark every AI-generated or AI-rewritten text block with ✦."
+description: "Create or update evidence-backed, style-matched FlowUs research records for two workflows: beginner-oriented, step-by-step academic paper-reading notes and experiment reports. Use when asked to add, import, classify, enrich, or verify a paper in a FlowUs paper database; or when asked to complete or revise a uniquely identified FlowUs experiment report from user-provided settings, records, metrics, images, tables, formulas, conclusions, completion time, or next-step plans. Read recent user-authored notes to match their writing style and mark every AI-generated or AI-rewritten text block with ✦."
 ---
 
 # Write FlowUs Research Records
@@ -91,19 +91,32 @@ description: "Create or update evidence-backed, style-matched FlowUs research re
 
 ### 3. 编写学习笔记
 
+新增、补全或重写论文正文前，必须完整阅读 [教学型论文笔记写作指引](references/paper-teaching-guide.md)。默认将读者视为第一次接触该论文方向的初学者，以读者能够循序理解动机、复述方法和判断实验证据为目标；用户明确指定其他深度或形式时，以用户要求为准。
+
+本标准适用于本次获授权的正文工作。局部补全应补足理解新增内容所需的上下文；仅查询、查重、调整分类或元数据，不因此触发全篇重写。近期笔记用于学习措辞与排版，不能据其简略程度省去必要的概念铺垫和推理衔接。
+
+- **概念先解释再使用。** 重要术语、缩写和符号在首次实质使用时就地解释，交代其含义、解决的问题及在本文中的作用；仅展开英文名称不算完成解释。
+- **段落沿因果关系推进。** 从具体困难推导现有方法的不足，再引出设计理由和方法作用；说明上一环节留下什么问题、下一环节为何必要。
+- **先整体、后细节。** 先建立任务与输入输出的直观认识，再按依赖关系展开模块。基础解释、核心流程和进阶细节分层安排，篇幅由理解需要决定。
+- **讲清模块和阶段的衔接。** 说明数据从哪里来、经过什么处理、输出交给谁；多阶段方法还要区分训练与推理、各阶段更新或冻结什么、部署时保留什么。
+- **用具体例子贯穿过程。** 选择适合论文任务的例子，跟随输入、模块处理、输出和反馈解释完整过程；需要数字帮助理解时，明确标注为教学示例，与论文实验数据和真实超参数区分。
+- **公式服务于理解。** 先说公式要解决的问题，再定义变量与必要单位、解释运算和直觉，最后连接到算法用途；涉及多种时间尺度、坐标系或动作定义时，明确区分。
+- **实验按验证逻辑讲解。** 每组实验说明待验证主张、设置与对照、指标含义和方向、读图或读表方式、结果、可支持结论及边界。中文图注忠实翻译，正文另行承担读图与分析。
+- **完成前进行教学审阅。** 检查是否有未解释的关键概念、突然出现的公式、缺少理由的设计或脱离方法的结果罗列；修正后再交付，格式回读不能替代这一检查。
+
 正文不重复数据库元数据，直接从以下结构开始，并按论文内容增加子标题：
 
 #### 1. 问题背景
 
-说明所属领域、具体任务、重要性，以及理解论文所需的背景知识。
+从直观任务或具体场景出发，说明所属领域、问题的重要性，以及理解论文所需的背景知识；其余前置概念在相关内容首次使用时继续补充。
 
 #### 2. 现有工作的问题与论文动机
 
-解释已有方法的限制、论文要解决的核心矛盾和提出新方法的原因；区分作者明确陈述与自己的理解。
+从具体失败或困难出发，解释已有方法的限制、论文要解决的核心矛盾，以及为什么需要作者提出的新设计；区分作者明确陈述与自己的理解。
 
 #### 3. 论文方法
 
-按由浅入深的顺序解释：
+先建立整体直觉和输入输出，再按依赖关系展开。以下内容都要解释，具体组织顺序随论文调整：
 
 1. 前置知识、术语与符号
 2. 方法整体直觉
@@ -118,7 +131,7 @@ description: "Create or update evidence-backed, style-matched FlowUs research re
 
 #### 4. 实验结果
 
-- 说明实验设置、比较对象、指标、主要结果及结果能够支持的结论。
+- 每组实验先说明它要验证哪个主张或设计，再解释设置、比较对象、指标含义与好坏方向、读图或读表方式、主要结果及其支持的结论和适用边界；把结果与前面的方法设计联系起来。
 - 收录论文中所有与实验结论相关的曲线图、柱状图、对比图、消融图、定性可视化、趋势图和机器人或场景展示图，并放在对应说明附近。
 - 需要收录的论文实验表格必须以截图插入，截图包含完整表头和表体但不包含论文原始 caption；将经逐句核对的中文 caption 翻译作为 FlowUs 图片图注，末尾添加 `✦`。不得重建、转录为 FlowUs 原生表格或使用其他形式模拟。
 
@@ -132,6 +145,12 @@ description: "Create or update evidence-backed, style-matched FlowUs research re
 - 新记录的阅读状态为未读等价选项，已有记录保留原状态。
 - 第一段标题是“1. 问题背景”，且方法、实验、限制章节完整。
 - 方法数据流、模块衔接、公式语境和端到端过程解释清楚。
+- 重要概念已在首次实质使用时解释，读者能理解其含义、必要性及在本文中的作用。
+- 动机与方法沿因果和依赖关系衔接，模块的输入输出、数据来源及相关训练和推理阶段可以串成完整过程。
+- 关键公式已交代目的、变量、必要单位、运算直觉与算法用途；不同时间尺度、坐标系或动作定义没有混用。
+- 贯穿案例能帮助读者复述方法；自行构造的过程或数字示例已与论文实测、作者结论和实际超参数明确区分。
+- 每组实验的验证目的、对照条件、指标、读图方式和结论边界清楚，读者能判断它支持前文的哪个主张。
+- 已完成教学审阅，未留下妨碍理解的概念跳跃、推理断层或孤立结果；内容深度符合用户要求。
 - 论文已有的相关方法图和实验图均已收录，图片本体不含原始 caption，FlowUs 图片图注是经逐句核对、准确表达原意的中文翻译，并以 `✦` 结尾。
 - 实验表格以带完整表头和表体但不含原始 caption 的原表截图收录；中文表 caption 作为 FlowUs 图片图注并已完成准确性核对。
 - 已按共同规范完成图片、公式和回读检查。
