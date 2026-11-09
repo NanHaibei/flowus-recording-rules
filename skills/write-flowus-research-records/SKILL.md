@@ -1,6 +1,6 @@
 ---
 name: write-flowus-research-records
-description: "Create or update evidence-backed, style-matched FlowUs research records for two workflows: beginner-oriented, step-by-step academic paper-reading notes and experiment reports. Use when asked to add, import, classify, enrich, or verify a paper in a FlowUs paper database; or when asked to complete or revise a uniquely identified FlowUs experiment report from user-provided settings, records, metrics, images, tables, formulas, conclusions, completion time, or next-step plans. Read recent user-authored notes to match their writing style and mark every AI-generated or AI-rewritten text block with ✦."
+description: "Create or update evidence-backed, style-matched FlowUs research records for two workflows: beginner-oriented, step-by-step academic paper-reading notes and experiment reports. Use when asked to add, import, classify, enrich, or verify a paper in a FlowUs paper database; or when asked to complete or revise a uniquely identified FlowUs experiment report from user-provided settings, records, metrics, images, tables, formulas, conclusions, completion time, or next-step plans. Follow the user's writing-style profile recorded in this skill and mark every AI-generated or AI-rewritten text block with ✦."
 ---
 
 # Write FlowUs Research Records
@@ -32,16 +32,13 @@ description: "Create or update evidence-backed, style-matched FlowUs research re
 - 保留目标页面中未被要求修改的文字、顺序、格式、附件和属性。只修改完成当前任务所必需的内容。
 - 不夸大结果，不把相关性写成因果，不把尚未执行的工作写成结果。
 
-### 3. 学习近期笔记的人工文风
+### 3. 使用已记录的用户语言风格
 
-每次在 FlowUs 生成或改写内容前执行以下步骤：
+论文笔记和实验报告的新写、补全与改写，默认直接参考以下已经确认的语言风格，不再为学习文风额外读取近期或更早的同类笔记。读取目标页面和相关材料仍用于确认事实、现有内容及格式。
 
-1. 读取目标所在数据库、分类或实验报告目录中最近更新的 3–5 篇同类笔记；目标页面已有的用户内容也可作为样本。
-2. 将没有 `✦` 的内容作为人工内容候选，优先选择实验原因、原始实验内容、个人总结、手写批注等能够确认由用户填写的段落。旧笔记没有标识且来源不明时，不得仅凭“没有 `✦`”断定为人工内容。
-3. 在内部提炼文风和格式特征，包括标题层级、章节顺序、段落长度、句式节奏、第一或第三人称、术语中英文习惯、列表密度、强调方式、图注写法、表格布局和结论语气；不要把这份风格分析写入目标页面。
-4. 使用提炼出的风格组织新内容，使其与用户近期笔记自然一致。只学习表达和排版，不复制原句、事实、结论或错误。
-5. 样本不足时扩大到同一数据库中更早的相关笔记；仍没有可靠人工样本时，保持目标页面现有格式并使用简洁、克制的技术写作风格。
-6. 文风模仿不得覆盖准确性、证据、任务结构和用户明确要求。
+用户的语言风格直接、口语化，以问题和实际用途为中心，带有鲜明的个人研究笔记色彩。习惯用中文串起逻辑，自然穿插 policy、encoder 等英文术语，用短段落、编号、公式和图表拆解问题，尤其关注输入输出、变量含义、数据流以及具体实现。解释原理时，常沿着“先理解这个，再推出那个”的顺序逐步展开；记录实验时，则顺着“发现现象—提出猜测—进行验证—得出结论—安排下一步”推进。会直接写下自己的判断、疑问和感受，用“个人感觉”“可能”“还不清楚”标出推测，也会用“起飞”“有点抽象”等口语作出鲜明评价，偶尔带一点调侃和吐槽。文字的详略围绕当前目标决定：关键问题愿意推导得很细，暂时用不上的分支就先放下，保留边理解、边验证、边修正想法的过程。
+
+文风模仿不得覆盖准确性、证据、任务结构和用户明确要求；不为模仿口语或调侃而夸大结果或编造用户态度。上述实验叙述顺序用于组织思路，具体栏目仍按实验报告工作流处理，下一步计划仍只写用户提供的内容。
 
 ### 4. 标记 AI 生成内容
 
@@ -93,7 +90,7 @@ description: "Create or update evidence-backed, style-matched FlowUs research re
 
 新增、补全或重写论文正文前，必须完整阅读 [教学型论文笔记写作指引](references/paper-teaching-guide.md)。默认将读者视为第一次接触该论文方向的初学者，以读者能够循序理解动机、复述方法和判断实验证据为目标；用户明确指定其他深度或形式时，以用户要求为准。
 
-本标准适用于本次获授权的正文工作。局部补全应补足理解新增内容所需的上下文；仅查询、查重、调整分类或元数据，不因此触发全篇重写。近期笔记用于学习措辞与排版，不能据其简略程度省去必要的概念铺垫和推理衔接。
+本标准适用于本次获授权的正文工作。局部补全应补足理解新增内容所需的上下文；仅查询、查重、调整分类或元数据，不因此触发全篇重写。共同规范中已记录的用户语言风格用于组织措辞与排版，不能因表达简洁而省去必要的概念铺垫和推理衔接。
 
 - **概念先解释再使用。** 重要术语、缩写和符号在首次实质使用时就地解释，交代其含义、解决的问题及在本文中的作用；仅展开英文名称不算完成解释。
 - **段落沿因果关系推进。** 从具体困难推导现有方法的不足，再引出设计理由和方法作用；说明上一环节留下什么问题、下一环节为何必要。
