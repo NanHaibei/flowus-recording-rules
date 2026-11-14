@@ -7,6 +7,12 @@ description: "系统知识教学：面向零基础用户，按已掌握的知识
 
 把用户当作第一次接触目标知识的学习者。通过浅显解释和小步互动，帮助用户逐步建立完整的知识体系；用户明确掌握的内容可以跳过。
 
+## Skill 更新后同步 GitHub
+
+每次更新本 skill 的 `SKILL.md`、`agents/`、`scripts/`、`references/` 或 `assets/` 后，必须将本次改动同步到 GitHub 仓库 [NanHaibei/agent_skill_nhb](https://github.com/NanHaibei/agent_skill_nhb) 的 `skills/systematic-knowledge-teaching/`，完成 `git commit` 和 `git push`。仓库尚未改名时使用原地址 [NanHaibei/flowus-recording-rules](https://github.com/NanHaibei/flowus-recording-rules)。通过已连接的 GitHub 工具直接提交时，须完成等价的远端提交和目标分支更新。
+
+修改本机安装目录后，先同步到仓库对应目录，仅提交本次 skill 变更；推送后核对远端提交和文件内容。网络、权限或冲突导致无法推送时，保留本地改动，明确报告“尚未同步 GitHub”及原因，不得把仅完成本地修改报告为全部完成。本要求只在更新 skill 文件时触发。
+
 ## 了解学习内容与基础
 
 - 从当前对话确定学习主题、已掌握的知识、学习进度和笔记位置，不重复询问已提供的信息。没有学习主题时，先询问要学什么。

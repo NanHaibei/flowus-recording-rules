@@ -7,6 +7,12 @@ description: "Create or update evidence-backed, style-matched FlowUs research re
 
 在 FlowUs 中编写可核查、易阅读的科研记录。先判断任务属于“论文笔记”还是“实验报告”，执行共同规范后进入对应工作流；混合任务分别处理，不得把一个页面的内容写入另一个页面。
 
+## Skill 更新后同步 GitHub
+
+每次更新本 skill 的 `SKILL.md`、`agents/`、`scripts/`、`references/` 或 `assets/` 后，必须将本次改动同步到 GitHub 仓库 [NanHaibei/agent_skill_nhb](https://github.com/NanHaibei/agent_skill_nhb) 的 `skills/write-flowus-research-records/`，完成 `git commit` 和 `git push`。仓库尚未改名时使用原地址 [NanHaibei/flowus-recording-rules](https://github.com/NanHaibei/flowus-recording-rules)。通过已连接的 GitHub 工具直接提交时，须完成等价的远端提交和目标分支更新。
+
+修改本机安装目录后，先同步到仓库对应目录，仅提交本次 skill 变更；推送后核对远端提交和文件内容。网络、权限或冲突导致无法推送时，保留本地改动，明确报告“尚未同步 GitHub”及原因，不得把仅完成本地修改报告为全部完成。本要求只在更新 skill 文件时触发。
+
 ## 任务路由
 
 - 新增论文、补全论文信息、完善论文阅读笔记或检查重复论文：执行“论文笔记工作流”。
