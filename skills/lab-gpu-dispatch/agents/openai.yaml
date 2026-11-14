@@ -1,0 +1,7 @@
+interface:
+  display_name: "实验室 GPU 池任务分发"
+  short_description: "查看实验室 GPU 资源，将训练和评估任务分发到空闲服务器并回传结果"
+  default_prompt: "使用 $lab-gpu-dispatch 检查 GPU 池，将当前任务分发到合适的空闲服务器，并核验运行状态。"
+
+policy:
+  allow_implicit_invocation: true

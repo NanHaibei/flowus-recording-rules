@@ -1,0 +1,4 @@
+interface:
+  display_name: "系统知识教学"
+  short_description: "面向零基础拆分学习大纲，每次讲一点，并在每轮讲解前检查学习笔记"
+  default_prompt: "请使用 $systematic-knowledge-teaching 带我系统学习指定内容：先了解我的基础并列出大纲，等我确认后再一次讲一个小知识点，每轮生成新内容前检查我提供的笔记。"
