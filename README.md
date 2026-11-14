@@ -9,6 +9,8 @@
 列出或安装仓库中的 skill：
 
 ```bash
-npx skills add NanHaibei/flowus-recording-rules --list
-npx skills add NanHaibei/flowus-recording-rules --skill write-flowus-research-records
+npx skills add NanHaibei/agent_skill_nhb --list
+npx skills add NanHaibei/agent_skill_nhb --skill write-flowus-research-records
+npx skills add NanHaibei/agent_skill_nhb --skill lab-gpu-dispatch
+npx skills add NanHaibei/agent_skill_nhb --skill systematic-knowledge-teaching
 ```
